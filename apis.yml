@@ -1,8 +1,15 @@
 aid: camber
 name: Camber
-description: 'Camber is a company surfaced as a portfolio company of craft-ventures and added to the API
-  Evangelist network as a stub for enrichment. Sector: health. This profile is a lead awaiting the enrichment
-  pipeline.'
+description: 'Camber is a healthcare revenue cycle management (RCM) and medical billing
+  software platform purpose-built for specialty care providers, including ABA (applied
+  behavior analysis) therapy, physical therapy, and ENT and allergy clinics. The platform
+  automates the full claims lifecycle — creation and submission, pre-submission scrubbing
+  and eligibility verification, payment posting and reconciliation, and denial management
+  and prevention — using a rules engine and AI trained on billions of dollars in real
+  claims data, combined with human review where judgment matters. Founded in 2019 (rebranded
+  from Juniper to Camber in 2025), the New York-based company is backed by Craft Ventures,
+  a16z, and Y Combinator, and processes over a million claims annually for hundreds
+  of specialty care providers across all 50 states.'
 url: https://raw.githubusercontent.com/api-evangelist/camber/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -10,12 +17,30 @@ x-backed-by:
 - craft-ventures
 x-tier: stub
 x-tier-reason: portfolio-lead
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://rwqqrnsxhishecvdnalx.supabase.co/storage/v1/object/public/assets/8c14c2ae-b41e-4c31-8afb-9c947abb4801/02740e5b-c5e3-4202-8bfc-6fdab7588fc5.png
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-18'
 tags:
 - Company
 - Health
+- Healthcare
+- Revenue Cycle Management
+- Medical Billing
+- Claims
+- Behavioral Health
+- Health Tech
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -24,4 +49,29 @@ maintainers:
   email: info@apis.io
 common:
 - type: Website
-  url: https://camber.health
+  url: https://www.camber.health
+- type: About
+  url: https://www.camber.health/company
+- type: SignUp
+  url: https://app.camber.health/login
+- type: Login
+  url: https://app.camber.health/login
+- type: Blog
+  url: https://www.camber.health/company/news
+- type: TermsOfService
+  url: https://www.camber.health/terms-of-service
+- type: PrivacyPolicy
+  url: https://www.camber.health/privacy-policy
+- type: Security
+  url: https://www.camber.health/responsible-disclosure
+- type: VulnerabilityDisclosure
+  url: security/camber-vulnerability-disclosure.yml
+- type: DomainSecurity
+  url: security/camber-domain-security.yml
+- type: LinkedIn
+  url: https://www.linkedin.com/company/camberhealth/
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence
