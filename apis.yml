@@ -6,8 +6,8 @@ description: 'Camber is a healthcare revenue cycle management (RCM) and medical 
   automates the full claims lifecycle — creation and submission, pre-submission scrubbing
   and eligibility verification, payment posting and reconciliation, and denial management
   and prevention — using a rules engine and AI trained on billions of dollars in real
-  claims data, combined with human review where judgment matters. Founded in 2019 (rebranded
-  from Juniper to Camber in 2025), the New York-based company is backed by Craft Ventures,
+  claims data, combined with human review where judgment matters. Founded in 2021 (Y Combinator
+  W21, rebranded from Juniper Behavioral Health to Camber), the New York-based company is backed by Craft Ventures,
   a16z, and Y Combinator, and processes over a million claims annually for hundreds
   of specialty care providers across all 50 states.'
 url: https://raw.githubusercontent.com/api-evangelist/camber/refs/heads/main/apis.yml
@@ -31,7 +31,7 @@ accessModel:
 image: https://rwqqrnsxhishecvdnalx.supabase.co/storage/v1/object/public/assets/8c14c2ae-b41e-4c31-8afb-9c947abb4801/02740e5b-c5e3-4202-8bfc-6fdab7588fc5.png
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-18'
+modified: '2026-08-15'
 tags:
 - Company
 - Health
@@ -70,8 +70,36 @@ common:
   url: security/camber-domain-security.yml
 - type: LinkedIn
   url: https://www.linkedin.com/company/camberhealth/
+- type: GitHubOrganization
+  url: https://github.com/Juniper-Health
+- type: Compliance
+  url: https://www.camber.health/platform
+- type: Conformance
+  url: conformance/camber-conformance.yml
+- type: LLMsTxt
+  url: llms/camber-llms.txt
 x-enrichment:
-  date: '2026-07-19'
-  status: backfilled
+  date: '2026-08-15'
+  status: minimal
+  artifacts_added: 5
   pass: local-v1
-  note: backfilled from .gitignore signal + verified work evidence
+x-coverage:
+  state: gated
+  reason: customer-only-docs
+  detail: >-
+    Camber runs a real production API at api.camber.health (AWS API Gateway behind
+    Cloudflare) that answers HTTP 401 with `WWW-Authenticate: Bearer` on every single
+    path — including /openapi.json and every /.well-known/* path — and it publishes no
+    developer portal, reference or docs host at all (docs.camber.health and
+    developer.camber.health do not resolve), so the contract is readable only by an
+    authenticated customer.
+  evidence:
+  - url: https://api.camber.health/openapi.json
+    status: 401
+  - url: https://api.camber.health/
+    status: 401
+  - url: https://www.camber.health/developers
+    status: 404
+  - url: https://www.camber.health/llms.txt
+    status: 404
+  checked: '2026-08-15'
