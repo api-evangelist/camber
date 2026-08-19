@@ -29,7 +29,7 @@ accessModel:
   generated: '2026-07-22'
   method: derived
 image: https://rwqqrnsxhishecvdnalx.supabase.co/storage/v1/object/public/assets/8c14c2ae-b41e-4c31-8afb-9c947abb4801/02740e5b-c5e3-4202-8bfc-6fdab7588fc5.png
-specificationVersion: '0.20'
+specificationVersion: '0.23'
 created: '2026-07-17'
 modified: '2026-08-15'
 tags:
