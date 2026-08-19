@@ -1,0 +1,19 @@
+generated: '2026-08-15'
+method: searched
+source: https://www.camber.health/sitemap.xml
+plan_count: 0
+public_pricing: false
+currency: null
+plans: []
+note: >-
+  Camber publishes no pricing page and no plan tiers. https://www.camber.health/pricing
+  returns HTTP 404 and the published sitemap (43 URLs, fetched 2026-08-15) contains no
+  pricing, plans, or packages page. Every commercial call to action on the site is
+  "Book a demo" or "Run a revenue audit", so pricing is a sales conversation. There is
+  also no separate API price list — the API surface at api.camber.health is not sold
+  as a metered product on any public page.
+evidence:
+- url: https://www.camber.health/pricing
+  status: 404
+- url: https://www.camber.health/sitemap.xml
+  status: 200

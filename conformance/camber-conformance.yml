@@ -1,0 +1,55 @@
+generated: '2026-08-15'
+method: searched
+source: https://www.camber.health/platform
+docs: https://www.camber.health/platform
+note: >-
+  Camber publishes one compliance claim and no third-party attestation. The "Security
+  & Compliance" panel on the platform page states verbatim: "Camber is HIPAA-compliant
+  by design, with end-to-end encryption, role-based access control, and a full audit
+  trail for every action taken on a claim. Your data is protected at every layer.",
+  with the bullets "HIPAA compliant", "End-to-end encryption", "Role-based access
+  control", "Full audit trail". That is a self-attestation on a marketing page — there
+  is no trust center (trust.camber.health does not resolve), no SOC 2 / ISO 27001 /
+  HITRUST report request flow, and no BAA page. Nothing below is derived from an
+  OpenAPI, because Camber publishes no machine-readable contract.
+standards:
+- id: hipaa
+  conforms: true
+  attestation: self-declared
+  certification_body: null
+  evidence: >-
+    "Camber is HIPAA-compliant by design" — Security & Compliance panel,
+    https://www.camber.health/platform (fetched 2026-08-15, HTTP 200)
+- id: soc2
+  conforms: false
+  evidence: No SOC 2 report, trust center, or attestation referenced on any public page.
+- id: iso-27001
+  conforms: false
+  evidence: Not claimed anywhere on camber.health.
+- id: hitrust
+  conforms: false
+  evidence: Not claimed anywhere on camber.health.
+- id: fhir-r4
+  conforms: false
+  evidence: >-
+    No FHIR surface published; fhir.camber.health does not resolve and no FHIR
+    capability statement or endpoint is documented.
+- id: x12-edi
+  conforms: unknown
+  evidence: >-
+    The platform page describes claim creation, scrubbing, submission and payment
+    posting against clearinghouses and payer portals, which implies X12 837/835
+    handling, but Camber publishes no statement of EDI conformance and no
+    implementation guide. Recorded as unknown rather than asserted.
+- id: oauth2
+  conforms: unknown
+  evidence: >-
+    api.camber.health returns `WWW-Authenticate: Bearer` on every path, so bearer
+    tokens are required, but no authorization-server metadata is served
+    (/.well-known/oauth-authorization-server → 401) and no auth documentation is
+    published, so the token issuance model cannot be established anonymously.
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: >-
+    The only anonymously observable error body is {"message":"Unauthorized"} — a bare
+    message envelope, not application/problem+json.

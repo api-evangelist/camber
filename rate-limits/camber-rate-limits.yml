@@ -1,0 +1,20 @@
+generated: '2026-08-15'
+method: searched
+source: https://www.camber.health/
+limit_count: 0
+limits: []
+headers: []
+note: >-
+  No rate limits are documented anywhere Camber publishes. There is no developer
+  portal, no API reference and no docs host (docs.camber.health and
+  developer.camber.health do not resolve in DNS), so there is no page on which a
+  limit could be stated. The live API host api.camber.health answers HTTP 401 on
+  every path before any route is reached, so no RateLimit-* / X-RateLimit-* headers
+  or 429 behavior can be observed anonymously either. Recorded as an honest zero,
+  not an omission — and NO RateLimits pointer is wired into apis.yml, because the
+  provider publishes no rate-limit signal to point at.
+evidence:
+- url: https://api.camber.health/
+  status: 401
+- url: https://www.camber.health/developers
+  status: 404

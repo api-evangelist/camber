@@ -1,0 +1,96 @@
+generated: '2026-08-15'
+method: probed
+source: live HTTPS probes of every Camber host found in apis.yml plus the API host
+note: >-
+  Every /.well-known/ path probed on every Camber host missed. www.camber.health and
+  camber.health return a real HTTP 404 (an HTML error page) for all of them.
+  api.camber.health returns HTTP 401 with `WWW-Authenticate: Bearer` for every path,
+  including /.well-known/* — the host is an AWS API Gateway behind Cloudflare that
+  requires a bearer token before any route, so nothing anonymous is served there.
+  app.camber.health is a single-page application that answers HTTP 200 with the same
+  1,675-byte HTML shell for every path; those 200s are SPA catch-alls, NOT documents,
+  and are recorded as misses. NO WellKnown or SecurityTxt pointer is emitted in
+  apis.yml, because nothing was actually served.
+documents_found: 0
+hosts:
+- host: https://www.camber.health
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+  - path: /llms.txt
+    status: 404
+- host: https://camber.health
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+  - path: /llms.txt
+    status: 404
+- host: https://api.camber.health
+  note: >-
+    Blanket 401 on every path. Server headers show `apigw-requestid` (AWS API Gateway)
+    fronted by Cloudflare; response body is {"message":"Unauthorized"} with
+    `WWW-Authenticate: Bearer`.
+  documents:
+  - path: /.well-known/security.txt
+    status: 401
+  - path: /.well-known/openid-configuration
+    status: 401
+  - path: /.well-known/oauth-authorization-server
+    status: 401
+  - path: /.well-known/oauth-protected-resource
+    status: 401
+  - path: /.well-known/api-catalog
+    status: 401
+  - path: /.well-known/agent-card.json
+    status: 401
+  - path: /.well-known/agent.json
+    status: 401
+- host: https://app.camber.health
+  note: >-
+    SPA catch-all. Every path returns HTTP 200 with an identical 1,675-byte HTML shell.
+    Treated as a miss on every probe — a 200 that returns HTML is not a document.
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    soft_200: true
+    content_type: text/html
+  - path: /.well-known/openid-configuration
+    status: 200
+    soft_200: true
+    content_type: text/html
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    soft_200: true
+    content_type: text/html
+  - path: /.well-known/agent-card.json
+    status: 200
+    soft_200: true
+    content_type: text/html
+  - path: /.well-known/agent.json
+    status: 200
+    soft_200: true
+    content_type: text/html
