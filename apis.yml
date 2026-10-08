@@ -59,6 +59,10 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: Plans
+  url: plans/camber-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/camber-rate-limits.yml
 - type: Website
   url: https://www.camber.health
 - type: About
