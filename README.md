@@ -64,6 +64,99 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Camber is a company surfaced as a portfolio company of craft-ventures and added to the API Evangelist network as a stub for enrichment. Sector: health. This profile is a lead awaiting the enrichment pipeline.
+Camber is a healthcare revenue cycle management (RCM) and medical billing software platform purpose-built for specialty care providers, including ABA (applied behavior analysis) therapy, physical therapy, and ENT and allergy clinics. The platform automates the full claims lifecycle — creation and submission, pre-submission scrubbing and eligibility verification, payment posting and reconciliation, and denial management and prevention — using a rules engine and AI trained on billions of dollars in real claims data, combined with human review where judgment matters. Founded in 2021 (Y Combinator W21, rebranded from Juniper Behavioral Health to Camber), the New York-based company is backed by Craft Ventures, a16z, and Y Combinator, and processes over a million claims annually for hundreds of specialty care providers across all 50 states.
 
-Backed by: craft-ventures — https://camber.health
+**Areas:** Company · Health · Healthcare · Revenue Cycle Management · Medical Billing · Claims · Behavioral Health · Health Tech
+
+## Camber on APIs.io
+
+Everything profiled for Camber is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/camber/](https://apis.io/providers/camber/)** — or go straight to one of the APIs or properties below.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Camber Domain Security](https://apis.io/security/camber/camber-domain-security/)
+- [Camber Vulnerability Disclosure](https://apis.io/security/camber/camber-vulnerability-disclosure/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Camber Plans Pricing](https://apis.io/plans/camber/camber-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Camber Rate Limits](https://apis.io/rate-limits/camber/camber-rate-limits/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.camber.health)
+- [Sign up](https://app.camber.health/login)
+- [Blog](https://www.camber.health/company/news)
+- [Security](https://www.camber.health/responsible-disclosure)
+- [Compliance](https://www.camber.health/platform)
+- [Terms of service](https://www.camber.health/terms-of-service)
+- [Privacy policy](https://www.camber.health/privacy-policy)
+- [GitHub](https://github.com/Juniper-Health)
+
+## API Evangelist rating
+
+**Kin Score 16.7** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 48.2 |
+| Contract quality | 0.0 |
+| Contract governance | 18.2 |
+| Operational transparency | 13.2 |
+| Developer ergonomics | 2.4 |
+| Access clarity | 28.9 |
+
+**Agent readiness 2.5** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 23.4** — Health
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/camber/](https://apis.io/providers/camber/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Camber: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/camber/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
